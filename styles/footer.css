@@ -2,31 +2,22 @@
     position: relative;
     overflow: hidden;
     color: rgb(255, 255, 255);
-    background: rgb(0, 0, 0);
-    /* margin-top: 250px; */
-    
+    background: rgb(0, 0, 0);   
 }
 
 .footer_content {
     position: relative;
     z-index: 1;
-    /* padding: 35px 0 100px 0; */
 }
 
 .footer_outro {
     text-align: center;
 }
 
-.footer_outro_content {
-    /* padding: 30px 30px 0; */
-}
-
 .footer_outro_header h2 {
     font-size: 38px;
     font-weight: 500;
     padding: 100px 0 20px;
-    
-    
 }
 
 .footer_outro_header p {
@@ -55,7 +46,6 @@
 
 .footer_email {
     margin: 50px 0 0 0;
-    
 }
 
 .footer_email a {
@@ -108,4 +98,108 @@
     height: 55px;
     padding: 12px;
     overflow: hidden;
+}
+
+/* tablet */
+@media screen and (min-width: 768px) {
+    .footer_outro_header h2 {
+        font-size: 48px;
+        padding: 50px 0 20px;
+    }
+    
+    .footer_outro_header p {
+        font-size: 20px;
+        padding: 0 70px;
+    }
+    
+    .footer_outro_header a {
+        font-size: 18px;
+        font-weight: 600;
+        padding: 25px 0 0;
+    }
+
+    .footer_email {
+        margin: 65px 0 0 0;
+    }
+    
+    .footer_email a {
+        font-size: 24px;
+        padding: 0 0 5px 0;
+    }
+    
+    .footer_address {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 15px;
+        margin: 35px auto 0;
+    }
+    
+    .footer_address address p {
+        margin: 0 auto 0;
+    }
+    
+    .footer_phone {
+        margin: 40px 0 0;
+    }
+    
+    .footer_phone a {
+        font-size: 16px;
+    }
+    
+    .footer_social {
+        position: relative;
+        padding: 50px 0 80px;
+    }
+
+    .footer_social {
+        padding: 60px 0 50px;
+    }
+    
+    .footer_social_item {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Large tablet */
+@media screen and (min-width: 768px) {
+    .footer_content {
+        padding: 60px 0;
+    }
+
+    .footer_outro {
+        text-align: left;
+    }
+
+    .footer_outro_content {
+        padding: 80px 120px;
+    }
+
+    .footer_outro_header h2 {
+        font-size: 54px;
+    }
+
+    .footer_outro_header p {
+        width: 75%;
+        font-size: 24px;
+        padding: 0;
+    }
+
+    .footer_outro_header a {
+        font-size: 20px;
+    }
+
+
+    .footer_body {
+        text-align: left;
+    }
+
+    .footer_body_content {
+        padding: 0 120px;
+    }
+
+    .footer_grid {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }

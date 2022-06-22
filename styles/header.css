@@ -10,7 +10,7 @@
     left: 0;
     bottom: 0;
     z-index: 195;
-    background: rgba(255, 255, 255, 0.65);
+    background: rgba(255, 255, 255, 0.45);
     transform: translateX(100%);
     transition: opacity 500ms ease-in-out, transform 600ms cubic-bezier(.5, 0, .5, 1);
 }
@@ -110,20 +110,15 @@
 
 /* Header Content */
 .header_container {
+    position: relative;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 25px 30px 0;
-}
-
-.header_logo {
-    z-index: 210;
 }
 
 .open-menu .header_logo {
     position: fixed;
-    top: 25px;
-    left: 30px;  
+    z-index: 230; 
 }
 
 .header_logo a {
@@ -132,42 +127,28 @@
     color: rgb(255, 255, 255);
 }
 
-.fixed_hamburger {
-    position: fixed;
-    top: 25px;
-    right: 30px;
-    z-index: 250;
-}
-
 .menu_toggle {
-    display: inline-block;
     position: relative;
-    background: 0 0;
+    background: 0;
     margin: 0;
     padding: 0;
     border: 0;
     cursor: pointer;
-    vertical-align: text-top;
 }
 
 .menu_toggle .menu{
     display: none;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 18px;
-    letter-spacing: 1px;
-    color: rgb(255, 255, 255);
-    margin-right: 45px;
 }
 
 .menu_hamburger {
-    position: relative;
-    top: 5px;
+    position: fixed;
+    top: 31px;
+    right: 30px;
     display: inline-block;
     width: 25px;
     line-height: 25px;
-    vertical-align: middle;
     transition: color 200ms;
+    z-index: 250;
 }
 
 .menu_hamburger::before {
@@ -178,7 +159,6 @@
     right: -20px;
     left: -20px;
     bottom: -20px;
-    /* z-index: 110; */
 }
 
 .menu_hamburger span {
@@ -191,7 +171,7 @@
     z-index: 1;
     background: rgb(255, 255, 255);
     transform: rotate(0);
-    transition: transform 300ms ease-in;
+    transition: transform 300ms ease-in; 
 }
 
 .open-menu .hamburger_top {
@@ -260,9 +240,28 @@
 
     /* Header Content */
     .header_container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 25px 30px 0;
+        padding: 40px 40px 0;
+    }
+
+    .fixed_hamburger {
+        position: absolute;
+        top: 43px;
+        right: 40px;
+    }
+
+    .menu_toggle .menu {
+        display: inline-block;
+        position: relative;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: rgb(255, 255, 255);
+        margin-right: 40px;  
+        z-index: -10000;     
+    }
+
+    .menu_hamburger {
+        top: 46px;
+        right: 40px;
     }
 }

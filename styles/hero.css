@@ -156,3 +156,52 @@
         line-height: 40px;
     }
 }
+
+/* Desktop */
+@media screen and (min-width: 1200px) {
+    .hero_container {
+        padding: 0 150px;
+        margin-top: 200px;
+    }
+
+    .hero_content {
+        width: 100%;
+    }
+
+    .hero_img {
+        display: none;
+    }
+
+    .hero_nav_item_spacer::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -30vh;
+        bottom: -30vh;
+        left: 0;
+        right: 0;
+    }
+
+    .hero_nav {
+        display: inline-block;
+        position: relative;
+    }
+
+    .hero_nav_item {
+        display: inline-block;
+    }
+
+    .hero_nav_item a {
+        display: block;
+        font-size: 6vw;
+        text-shadow: none;
+        -webkit-text-stroke: 1px rgb(255, 255, 255);
+        color: transparent;
+        padding: 12px 15px;
+        border: none;
+    }
+
+    .hero_nav_container {
+        width: 100%;
+    }
+}

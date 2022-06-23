@@ -15,17 +15,21 @@ links.forEach(link => {
 
 // Follow Cursor
 
-// const cursor = document.querySelector('.cursor');
+const cursor = document.querySelector('.cursor');
 // const cursorDiv = document.querySelector('.cursorDiv')
 
-// const moveCursor = (e) => {
-//     const mouseX = e.clientX;
-//     const mouseY = e.clientY;
-//     cursorDiv.setAttribute('transform', `translate(${mouseX}px, ${mouseY}px, 0)`);
-// }
+const onMouseMove = (e) => {
+    // const mouseX = e.pageX;
+    // const mouseY = e.pageY;
+    
+    cursor.style.left = e.pageX + 'px';
+    cursor.style.top = e.pageY + 'px';
 
-// window.addEventListener('mousemove', () =>{
+    // cursor.setAttribute('transform', `translate(${mouseX}px, ${mouseY}px)`);
+}
+
+// document.addEventListener('mousemove', () =>{
 //     cursorDiv.classList.add('visible')
 // });
 
-// window.addEventListener('mousemove', moveCursor);
+document.addEventListener('mousemove', onMouseMove);
